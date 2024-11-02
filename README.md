@@ -27,18 +27,18 @@ A stream is an unbound sequence of ordered, immutable data. Event is an immutabl
 ## Components
 
 1. Producers
-   Things that produce data: sensors, clients,..
+- Things that produce data: sensors, clients,..
 2. Kafka brokers
    Single member (brokers, nodes, computing units like ec2 instances,... different names mean the same thing) that "writes" data in a Kafka server. A group of brokers if called a cluster.
 3. Consumers
-   Consume/read the data: reports, dashboards, ml, processes...
+- Consume/read the data: reports, dashboards, ml, processes...
 4. Zookeeper
-   zookeeper is the resource manager of the Kafka managers (cluster management, failure detection, access control, synchronisation). This one is a Key Value Store.
+- Zookeeper is the resource manager of the Kafka managers (cluster management, failure detection, access control, synchronisation). This one is a Key Value Store.
 5. Topics
-   The logical buckets (sub-section of messages) in the Kafka Broker. Defined by the developer, unlimited number. Each topic can have 0-n partitions, which are log files with all information of the partition. For example, topic "transaction" can have each customer as a partition. In the partition, the information of the customer is stored in that single partition.
+- The logical buckets (sub-section of messages) in the Kafka Broker. Defined by the developer, unlimited number. Each topic can have 0-n partitions, which are log files with all information of the partition. For example, topic "transaction" can have each customer as a partition. In the partition, the information of the customer is stored in that single partition.
    All the topics and partitions are duplicated across brokers, so if one broker fail then you can access them in another broker (*but isn't this redundant?*)
 6. Log files (Data Partition)
-   Files in which incoming events are written at the end of the file (appended).
+- Files in which incoming events are written at the end of the file (appended).
 
-
-> Note: I've just barely scratched the surface here in stream processing, gotta study more lah :>
+<br>
+> [Note]: I've just barely scratched the surface here in stream processing, gotta study more lah :>
