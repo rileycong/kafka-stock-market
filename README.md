@@ -39,3 +39,6 @@ A stream is an unbound sequence of ordered, immutable data. Event is an immutabl
    All the topics and partitions are duplicated across brokers, so if one broker fail then you can access them in another broker (*but isn't this redundant?*)
 6. Log files (Data Partition)
    Files in which incoming events are written at the end of the file (appended).
+
+
+> Note: I've just barely scratched the surface here in stream processing, gotta study more lah :>
